@@ -1,11 +1,11 @@
 # Example for ethereum and custom token (web3 + parity)
-node    v6.11.2
+node   :   v6.11.2
 
-web3    0.20.2
+web3   :  0.20.2
 
-Parity  Parity/v1.6.10-stable-1a5b176-20170721/x86_64-macos/rustc1.18.0
+Parity :  Parity/v1.6.10-stable-1a5b176-20170721/x86_64-macos/rustc1.18.0
 
-solc    0.4.12
+solc   :  0.4.12
 
 # MacOS
 
