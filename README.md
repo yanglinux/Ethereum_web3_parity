@@ -13,7 +13,7 @@ https://nodejs.org/ja/download/
 
 # 3. install web3
 
-npm install web3
+npm install web3@0.20.2
 
 # 4. install solc
 
