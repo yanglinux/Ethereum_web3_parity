@@ -1,5 +1,4 @@
-# ethereum_web3_parity
-web3 parity example
+# Example for ethereum and custom token (web3 + parity)
 
 # MacOS
 
