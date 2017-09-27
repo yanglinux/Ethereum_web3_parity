@@ -43,9 +43,9 @@ http://faucet.ropsten.be:3001
 
 ・create_new_token.js　　　　   (新token作成、簡単的に)
 
-・eth_getbalance_transfer.js　　(ethereum coinの残高・送金)
+・eth_getbalance_transfer.js　　(ethereum coinの残高確認・送金)
 
-・token_getbalance_transfer.js  (token の残高・送金)
+・token_getbalance_transfer.js  (token の残高確認・送金)
 
 
 
