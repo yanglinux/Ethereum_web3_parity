@@ -1,3 +1,4 @@
+// web3@0.20.2
 // Red Moon Token: balance and transfer example
 
 const Web3 = require('web3');

@@ -1,3 +1,4 @@
+// web3@0.20.2
 //ETH 残高・送金の例
 const Web3 = require('web3');
 
