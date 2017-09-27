@@ -38,31 +38,15 @@ you can get free testnet eth from under url:
 
 http://faucet.ropsten.be:3001
 
-# 7.eth_getbalance_transfer.jsの実行結果
 
-$ node eth_getbalance_transfer.js
+# 7.　各ファイルの説明
 
-accounts[0]: 0x00xxxxxxxxxxxxxxxx3fee6fc20dce3cc41dd400
+・新token作成              : create_new_token.js
 
-accounts[1]: 0x00xxxxxxxxxxxxxxxx35638727d93ede7cf779d8
+・ethereum coinの残高・送金 : eth_getbalance_transfer.js
 
-{ [String: '2799975870000000000'] s: 1, e: 18, c: [ 27999, 75870000000000 ] }
-
-{ [String: '3040000000000000000'] s: 1, e: 18, c: [ 30400 ] }
+・token の残高・送金        : token_getbalance_transfer.js
 
 
-# 8.token_getbalance_transfer.js の実行結果
-
-$ node token_getbalance_transfer.js
-
-0.20.2
-
-accounts[0]: 0x00xxxxxxxxxxxxxxxx3fee6fc20dce3cc41dd400
-
-accounts[1]: 0x00xxxxxxxxxxxxxxxx35638727d93ede7cf779d8
-
-{ [String: '4222222977778'] s: 1, e: 12, c: [ 4222222977778 ] }
-
-{ [String: '777777022222'] s: 1, e: 11, c: [ 777777022222 ]
 
 # good luck!

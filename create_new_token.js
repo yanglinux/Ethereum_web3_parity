@@ -13,7 +13,7 @@ var from = web3.eth.accounts[0];
 
 //var coin_sorce = 'contract JapanCoin{address public minter;mapping(address=>uint) public balances;event Sent(address from,address to,uint amount);function JapanCoin(){minter=msg.sender;}function mint(address receiver,uint amount){if(msg.sender!=minter) return;balances[receiver]+=amount;}function send(address receiver,uint amount){if(balances[msg.sender]<amount)return;balances[msg.sender]-=amount;balances[receiver]+=amount;Sent(msg.sender,receiver,amount);}}';
 //var coin_sorce = fs.readFileSync('RedmoonToken.sol', 'utf8');
-var coin_sorce = fs.readFileSync('./contracts/RedMoonToken.sol', 'utf8');
+var coin_sorce = fs.readFileSync('./contract/RedMoonToken.sol', 'utf8');
 
 // コンパイル
 var compiledContract = solc.compile(coin_sorce, 1);
