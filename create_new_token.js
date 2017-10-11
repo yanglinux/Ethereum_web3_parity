@@ -9,24 +9,23 @@ if (typeof web3 !== 'undefined') {
     // set the provider you want from Web3.providers
     web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"));
 }
-var from = web3.eth.accounts[0];
 
 //var coin_sorce = 'contract JapanCoin{address public minter;mapping(address=>uint) public balances;event Sent(address from,address to,uint amount);function JapanCoin(){minter=msg.sender;}function mint(address receiver,uint amount){if(msg.sender!=minter) return;balances[receiver]+=amount;}function send(address receiver,uint amount){if(balances[msg.sender]<amount)return;balances[msg.sender]-=amount;balances[receiver]+=amount;Sent(msg.sender,receiver,amount);}}';
 //var coin_sorce = fs.readFileSync('RedmoonToken.sol', 'utf8');
-var coin_sorce = fs.readFileSync('./contract/RedMoonToken.sol', 'utf8');
+var coin_sorce = fs.readFileSync('./contract/RedMoonCoin.sol', 'utf8');
 
 // コンパイル
 var compiledContract = solc.compile(coin_sorce, 1);
 // ABIを取得(配列のキーはなぜか頭に:が必要でした)
-var abi = compiledContract.contracts[':RedMoonToken'].interface;
+var abi = compiledContract.contracts[':RedMoonCoin'].interface;
 //
-var bytecode = "0x" + compiledContract.contracts[':RedMoonToken'].bytecode;
+var bytecode = "0x" + compiledContract.contracts[':RedMoonCoin'].bytecode;
 // デプロイに必要なGasを問い合わせる
 var gasEstimate = web3.eth.estimateGas({data: bytecode});
 //
 var TestContract = web3.eth.contract(JSON.parse(abi));
 
-web3.personal.unlockAccount(web3.eth.accounts[1], "xxxxxx");
+web3.personal.unlockAccount(web3.eth.accounts[1], "password");
 
 TestContract.new(
   10000000,

@@ -22,7 +22,7 @@ var contract = TestContract.at(address);
 console.log("accounts[0]:", web3.eth.accounts[0]);
 console.log("accounts[1]:", web3.eth.accounts[1]);
 
-web3.personal.unlockAccount(web3.eth.accounts[0], "xxxxxx");
+web3.personal.unlockAccount(web3.eth.accounts[0], "password");
 
 var user1_balance = contract.balanceOf(web3.eth.accounts[0]);
 var user2_balance = contract.balanceOf(web3.eth.accounts[1]);
@@ -30,4 +30,3 @@ console.log(user1_balance);
 console.log(user2_balance);
 
 contract.transfer(web3.eth.accounts[1],22222,{from:web3.eth.accounts[0]});
-
